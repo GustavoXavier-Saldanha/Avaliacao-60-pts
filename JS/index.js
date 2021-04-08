@@ -24,7 +24,7 @@ let saborPizza = parseInt(prompt(`Perfeito, nós temos os seguintes sabores:\n1:
 let saborPizza2;
 
 if (numeroSaborPizza == 2) {
-    saborPizza2 = parseInt(prompt(`Agora escolha o sabor da outra metade:\n1: Calabresa - Mussarela, Calabresa e cebola \n2: 4 Queijos - Mussarela, Cheddar, Parmesão e Prato\n3: Frango com Catupiry- Mussarela, Frango e Catupiry\n4: Portuguesa - Mussarela, Pimentão, Cebola, Presunto, Ovo, Cebola\n5: Camarão - Mussarela, Camarão, Salsinha e Cebolinha\n6: Carne seca - Mussarela, Carne seca e cream cheese\n7: Lombo Canadense - Mussarela, Lombo Canadense, Tomate, Orégano, Cebola\n8: X-Fritas - Mussarela, Contra-filé, Presunto, Bacon, Ovo, Tomate, Cebola, Batata Frita`));
+    saborPizza2 = parseInt(prompt(`Agora escolha o sabor da outra metade:\n1: Calabresa - Mussarela, Calabresa e cebola \n2: 4 Queijos - Mussarela, Cheddar, Parmesão e Prato\n3: Frango com Catupiry - Mussarela, Frango e Catupiry\n4: Portuguesa - Mussarela, Pimentão, Cebola, Presunto, Ovo, Cebola\n5: Camarão - Mussarela, Camarão, Salsinha e Cebolinha\n6: Carne seca - Mussarela, Carne seca e cream cheese\n7: Lombo Canadense - Mussarela, Lombo Canadense, Tomate, Orégano, Cebola\n8: X-Fritas - Mussarela, Contra-filé, Presunto, Bacon, Ovo, Tomate, Cebola, Batata Frita`));
 }
 
 
@@ -49,10 +49,10 @@ let formaPagamento = parseInt(prompt(`O valor total foi do pedido foi: R$${somaT
 let pagamento = formaDePagamento(formaPagamento);
 
 if (formaPagamento == 4) {
-    troco = prompt(`Você precisará de troco?\nDigite: sim ou não `).toLowerCase();
+    troco = prompt(`O valor total foi: R$${somaTotal},00.\nVocê precisará de troco?\nDigite: sim ou não `).toLowerCase();
 
     if (troco == "sim") {
-        valorTroco = parseInt(prompt(`O valor total foi de: R$${somaTotal},00.\n${nome}, digite para quanto precisaremos levar o troco`));
+        valorTroco = parseInt(prompt(`O valor total foi de: R$${somaTotal},00.\n${nome}, o troco é para quanto?`));
     }
 }
 
@@ -78,12 +78,26 @@ if(confirmacao != "sim"){
 document.write(`<h3>O número do seu pedido é: ${numeroDoPedido()}.</h3>`);
 document.write(`Tamanho: ${tamanho}.<br>`);
 document.write(`O tipo de borda escolhido é: ${borda}.<br>`);
-document.write(`Uma metade será de: ${sabor}<br>`);
-document.write(`Sua bebida é: ${acompanhamento}<br>`);
-document.write(`O tipo de entrega é:${informacoesDelivery}<br>`);
-document.write(`O valor total é: <strong>R$${somaTotal},00</strong><br>`);
+document.write(`Uma metade será de: ${sabor}.<br>`);
+document.write(`Sua bebida é: ${acompanhamento}.<br>`);
+document.write(`O tipo de entrega é:${informacoesDelivery}.<br>`);
+document.write(`O valor total é: <strong>R$${somaTotal},00.</strong><br>`);
 document.write(`A forma de pagamento será: ${pagamento}.<br>`);
-
 if (troco == "sim"){
-    document.write(`Enviaremos o troco de: R$${valorTroco - somaTotal},00.`);
+    document.write(`Enviaremos o troco de: R$${valorTroco - somaTotal},00.<br>`);
+}
+
+document.write(`<h3>Informações do pedido.</h3><br>`);
+
+if(tipoEntrega == 2){
+    document.write(`O telefone para contato é: ${telefone}.<br>`);
+    document.write(`O endereço é: ${enderecoCompleto}.<br>`);
+    document.write(`O complemento é: ${complemento}.<br>`);
+    document.write(`O bairro é: ${bairro}.<br>`);
+    document.write(`A forma de pagamento será: ${pagamento}.<br>`);
+    document.write(`A referência informada é: ${referencia}.<br>`);
+}
+else{
+    document.write(`O nome de quem vai realizar a retirada é: ${nomeRetirada}.<br>`);
+    document.write(`O telefone de quem vai fazer a retirada é: ${telefoneRetirada}.<br>`); 
 }
