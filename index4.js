@@ -27,7 +27,15 @@
 
 let nome = prompt("Bem vindo, por favor informe seu nome : )!");
 
-let tamanhoPizza = parseInt(prompt(`${nome}\n 1: Pequena 20cm  - R$25,00\n2: Media 25cm  - R$30,00\n3: Gigante 35cm  - R$40,00\n4: Familia 40cm  - R$45,00`));
+let telefone;
+let enderecoCompleto;
+let complemento;
+let bairro;
+let referencia;
+let nomeRetirada;
+let telefoneRetirada;
+
+let tamanhoPizza = parseInt(prompt(`${nome}\n1: Pequena 20cm  - R$25,00\n2: Media 25cm  - R$30,00\n3: Gigante 35cm  - R$40,00\n4: Familia 40cm  - R$45,00`));
 
 
 let bordaPizza = parseInt(prompt(`Tipo de borda:\n1: Gorgonzola  - R$10,00\n2: Provolone  - R$8,00\n3:Catupiry  - R$5,00\n4: Cheddar - R$5,00\n5:Sem borda`));
@@ -52,21 +60,21 @@ let bebida = parseInt(prompt(`1: Coca Cola  - R$12,00\n2: Fanta - R$10,00\n3: Gu
 let tipoEntrega = parseInt(prompt(`1: Retirada no Balcão - R$0,00\n
 2: Delivery  - R$5,00
 `));
-
+let informacoesDelivery = correio(tipoEntrega);
 let tamanho = tamanhoDaPizza(tamanhoPizza);
-let borda = bordasSabor(bordaPizza)
-let sabor = pizzaSaborUnico(saborPizza)
-let meia2 = pizzaSaborDuplo(saborPizza, saborPizza2)
-let acompanhamento = nomeBebida(bebida)
-let pagamento = formaPagamento(formaPagamento)
+let borda = bordasSabor(bordaPizza);
+let sabor = pizzaSaborUnico(saborPizza);
+let meia2 = pizzaSaborDuplo(saborPizza2);
+let acompanhamento = nomeBebida(bebida);
+let pagamento = formaPagamento(formaPagamento);
 
 let somaTotal;
 
 if (numeroSaborPizza == 2){
-        alert(`O seu pedido foi:\nTamanho: ${tamanho}.\nO tipo de borda é: ${borda}\nUma metade será de: ${sabor}\nA outra metade será de: ${meia2}.\nSua bebida é: ${acompanhamento}.\nO tipo de entrega é:${correio(tipoEntrega)}.\nO valor total é: ${somaTotal}.\nAforma de pagamento será: ${pagamento}.`);
+        alert(`O seu pedido foi:\nTamanho: ${tamanho}.\nO tipo de borda é: ${borda}\nUma metade será de: ${sabor}\nA outra metade será de: ${meia2}.\nSua bebida é: ${acompanhamento}.\nO tipo de entrega é:.\nO valor total é: ${somaTotal}.\nAforma de pagamento será: ${pagamento}.`);
 }
     else if (numeroSaborPizza == 1){ 
-        alert(`O seu pedido foi:\nTamanho: ${tamanho}.\nO tipo de borda é: ${borda}\nUma metade será de: ${sabor}\nA outra metade será de: ${meia2}.\nSua bebida é: ${acompanhamento}.\nO tipo de entrega é:${correio(tipoEntrega)}.\nO valor total é: ${somaTotal}.\nAforma de pagamento será: ${pagamento}.`);
+        alert(`O seu pedido foi:\nTamanho: ${tamanho}.\nO tipo de borda é: ${borda}\nUma metade será de: ${sabor}\nSua bebida é: ${acompanhamento}.\nO tipo de entrega é:.\nO valor total é: ${somaTotal}.\nAforma de pagamento será: ${pagamento}.`);
     }
     else{ alert('Você digitou a quantidade de sabores da pizza errado');
       
@@ -229,13 +237,6 @@ function nomeBebida(bebida){
             return nomeDaBebida
 }
 
-let telefone;
-let enderecoCompleto;
-let complemento;
-let bairro;
-let referencia;
-let nomeRetirada;
-let telefoneRetirada;
 
 function correio(tipoEntrega) {
     if (tipoEntrega == 2){
@@ -248,7 +249,7 @@ function correio(tipoEntrega) {
        return `Delivery`;   
 
     } else{
-        nomeRetirada = prompt(`Informe o nome para retirada do pedido:`);
+        nomeRetirada = prompt(`Informe o nome de quem irá realizar a retirada do pedido:`);
         telefoneRetirada = prompt(`Informe um telefone com DDD para retirada do pedido`);
 
         return `Retirada no balcão`;  
