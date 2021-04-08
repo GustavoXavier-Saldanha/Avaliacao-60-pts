@@ -68,11 +68,31 @@ let somaTotal;
 let confirmacao = parseInt(prompt(`Deseja confirmar seu pedido?`));
 let certeza = parseInt(prompt(`Tem certeza?`));
 
-let formaPagamento = parseInt(prompt(`1: Cartão\n
-2: Pix\n
-3: PicPay\n
-4: Dinheiro`));
+function tamanhoDaPizza(tamanhoPizza){
+    let tamanho;
+    switch (tamanhoPizza) {
+        case 1:
+            tamanho = "Pequena 20cm"
+            break;
+        case 2:
+            tamanho = "Media 25cm"
+            break;
+        case 3:
+            tamanho = "Gigante 35cm"
+            break;
+    }
+}
 
+function bordasSabor(bordaPizza){
+    switch(bordaPizza){
+
+        case 1: return `Gorgonzola`;
+        case 2: return `Provolone`;
+        case 3: return `Catupiry`;
+        case 4: return `Cheddar`;
+        case 5: return `Você escolheum um valor de borda inexistente`
+    }
+}
 
 function pizzaSaborUnico(saborPizza) {
     let sabor;
@@ -103,6 +123,7 @@ function pizzaSaborUnico(saborPizza) {
             break;
     }return sabor
 }
+
 function pizzaSaborDuplo(saborPizza, saborPizza2) {
     let sabor1;
     let sabor2;
@@ -161,8 +182,47 @@ function pizzaSaborDuplo(saborPizza, saborPizza2) {
 return sabor1 + sabor2
 }
 
+function nomeBebida(bebida){
+    let nomeDaBebida;
+    switch (bebida) {
+        case 1:
+            nomeDaBebida = "Coca Cola"
+            break;
+        case 2:
+            nomeDaBebida = "Fanta"
+            break;
+        case 3:
+            nomeDaBebida = "Guaraná Antartica"
+            break;
+        case 4: 
+            nomeDaBebida = "H2O"
+            break;
+        case 5:
+            nomeDaBebida = "Del Valle"
+            break;
+    }
+            return nomeDaBebida
+}
 
-switch (numeroSaborPizza) {
+function formaPagamento(formaPagamento) {
+        let pagamento;
+        switch (formaPagamento) {
+            case 1:
+                pagamento = "Cartão"
+                break;
+            case 2:
+                pagamento = "pix"
+                break;
+            case 3:
+                pagamento = "PicPay"
+                break;
+            case 4:
+                pagamento = "Dinheiro"
+                break;
+        }return pagamento
+}
+
+switch (numeroSaborPizza){
 
     case numeroSaborPizza == 2:
         alert(`O seu pedido foi:\nTamanho: ${tamanhoPizza}.\nO tipo de borda é: ${bordaPizza}\nUma metade será de: ${nomeSabor}\nA outra metade será de: ${nomeSabor2}.\nSua bebida é: ${bebida}.\nO tipo de entrega é:${tipoEntrega}.\nO valor total é: ${somaTotal}.\nAforma de pagamento será: ${formaPagamento}.`);
