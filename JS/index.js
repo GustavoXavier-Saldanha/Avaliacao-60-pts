@@ -59,10 +59,10 @@ if (formaPagamento == 4) {
 
 
 if (numeroSaborPizza == 2) {
-    alert(`O pedido ${numeroDoPedido()} foi:\nTamanho: ${tamanho}.\nO tipo de borda escolhido é: ${borda}\nUma metade será de: ${sabor}\nA outra metade será de: ${meia2}.\nSua bebida é: ${acompanhamento}.\nO tipo de entrega é:${informacoesDelivery}.\nO valor total é: <strong>R$${somaTotal},00</strong>.\nA forma de pagamento será: ${pagamento}.`);
+    alert(`O número do seu pedido é: ${numeroDoPedido()}\nPedido:\nTamanho: ${tamanho}.\nO tipo de borda escolhido é: ${borda}\nUma metade será de: ${sabor}\nA outra metade será de: ${meia2}.\nSua bebida é: ${acompanhamento}.\nO tipo de entrega é: ${informacoesDelivery}.\nO valor total é: R$${somaTotal},00.\nA forma de pagamento será: ${pagamento}.`);
 }
 else if (numeroSaborPizza == 1) {
-    alert(`O pedido ${numeroDoPedido()} foi:\nTamanho: ${tamanho}.\nO tipo de borda escolhido é: ${borda}\nUma metade será de: ${sabor}\nSua bebida é: ${acompanhamento}.\nO tipo de entrega é:${informacoesDelivery}.\nO valor total é: R$${somaTotal},00.\nA forma de pagamento será: ${pagamento}.`);
+    alert(`O número do seu pedido é: ${numeroDoPedido()}\nPedido:\nTamanho: ${tamanho}.\nO tipo de borda escolhido é: ${borda}\nUma metade será de: ${sabor}\nSua bebida é: ${acompanhamento}.\nO tipo de entrega é: ${informacoesDelivery}.\nO valor total é: R$${somaTotal},00.\nA forma de pagamento será: ${pagamento}.`);
 }
 else {
     alert('Você digitou algum dado errado, refaça o pedido!!\nNão desista de nós <3!!');
@@ -75,12 +75,15 @@ if(confirmacao != "sim"){
     alert("Pedido cancelado!!\nNão desista de nós!!\nReinicie a página, por favor!");
 }
 
-document.write(`O número do seu pedido é: ${numeroDoPedido()}`);
-document.write(`Tamanho: ${tamanho}.`);
-document.write(`O tipo de borda escolhido é: ${borda}`);
-document.write(`Uma metade será de: ${sabor}`);
-document.write(`Sua bebida é: ${acompanhamento}`);
-document.write(`O tipo de entrega é:${informacoesDelivery}`);
-document.write(`O valor total é: <strong>R$${somaTotal},00`);
-document.write(`A forma de pagamento será: ${pagamento}.`);
-document.write(`Enviaremos o troco de: R$${valorTroco - somaTotal},00.`);
+document.write(`<h3>O número do seu pedido é: ${numeroDoPedido()}.</h3>`);
+document.write(`Tamanho: ${tamanho}.<br>`);
+document.write(`O tipo de borda escolhido é: ${borda}.<br>`);
+document.write(`Uma metade será de: ${sabor}<br>`);
+document.write(`Sua bebida é: ${acompanhamento}<br>`);
+document.write(`O tipo de entrega é:${informacoesDelivery}<br>`);
+document.write(`O valor total é: <strong>R$${somaTotal},00</strong><br>`);
+document.write(`A forma de pagamento será: ${pagamento}.<br>`);
+
+if (troco == "sim"){
+    document.write(`Enviaremos o troco de: R$${valorTroco - somaTotal},00.`);
+}
