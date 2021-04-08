@@ -57,16 +57,25 @@ let tipoEntrega = parseInt(prompt(`1: Retirada no Balcão - R$0,00\n
 `));
 let valorEntrega = [0, 5];
 
-let dadosEntrega = {
-    celular: prompt(`Digite o seu número de celular`),
-    bairro: prompt(`Digite o nome do seu bairro`),
-    rua: prompt(`Digite o nome da sua rua`),
-    complemento: prompt(`Digite um complemento`),
-    numeroCasa: prompt(`Digite o numero da sua casa`),
-    pontoDeReferencia: prompt(`Digite um ponto de referencia`)
-};
+if(tipoEntrega == 2){
+    let dadosEntregaDelivery = {
+        celular: prompt(`Digite o seu número de celular`),
+        bairro: prompt(`Digite o nome do seu bairro`),
+        rua: prompt(`Digite o nome da sua rua`),
+        complemento: prompt(`Digite um complemento`),
+        numeroCasa: prompt(`Digite o numero da sua casa`),
+        pontoDeReferencia: prompt(`Digite um ponto de referencia`)
+    };
+}
 
 let somaTotal = valorBebida[bebida - 1] + valorBordaPizza[bordaPizza - 1] + valorTamanhoPizza[tamanhoPizza - 1] + valorEntrega[tipoEntrega - 1];
+
+switch (numeroSaborPizza, tipoEntrega) {
+
+    case numeroSaborPizza == 2 && tipoEntrega == 2: 
+        alert(`O seu pedido foi:\nTamanho: ${tamanhoPizza}.\nO tipo de borda é: ${saborPizza2}\n${}`)
+        break;
+
 
 let confirmacao = parseInt(prompt(`Deseja confirmar seu pedido?`));
 let certeza = parseInt(prompt(`Tem certeza?`));
