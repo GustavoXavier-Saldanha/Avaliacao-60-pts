@@ -68,6 +68,7 @@ let somaTotal;
 let confirmacao = parseInt(prompt(`Deseja confirmar seu pedido?`));
 let certeza = parseInt(prompt(`Tem certeza?`));
 
+
 function tamanhoDaPizza(tamanhoPizza){
     let tamanho;
     switch (tamanhoPizza) {
@@ -90,10 +91,15 @@ function bordasSabor(bordaPizza){
     switch(bordaPizza){
 
         case 1: return `Gorgonzola`;
+        break;
         case 2: return `Provolone`;
+        break;
         case 3: return `Catupiry`;
+        break;
         case 4: return `Cheddar`;
+        break;
         case 5: return `Você escolheum um valor de borda inexistente`
+        break;
     }
 }
 
@@ -101,28 +107,28 @@ function pizzaSaborUnico(saborPizza) {
     let sabor;
     switch (saborPizza) {
         case 1:
-            sabor = "Calabresa"
+            sabor = "Calabresa";
             break;
         case 2:
-            sabor = "4 Queijos"
+            sabor = "4 Queijos";
             break;
         case 3:
-            sabor = "Frango"
+            sabor = "Frango";
             break;
         case 4:
-            sabor = "Portuguesa"
+            sabor = "Portuguesa";
             break;
         case 5:
-            sabor = "Camarão"
+            sabor = "Camarão";
             break;
         case 6:
-            sabor = "Carne seca"
+            sabor = "Carne seca";
             break;
         case 7:
-            sabor = "Lombo Canadense"
+            sabor = "Lombo Canadense";
             break;
         case 8:
-            sabor = "X-Fritas"
+            sabor = "X-Fritas";
             break;
     }return sabor
 }
@@ -205,6 +211,26 @@ function nomeBebida(bebida){
             break;
     }
             return nomeDaBebida
+}
+
+function correio(valorEntrega) {
+    if (valorEntrega == 5){
+       let telefone = prompt(`Informe o telefone com DDD:`);
+       let enderecoCompleto = prompt(`Confirme seu endereço com número:`);
+       let complemento = prompt(`Tem algum complemento?`);
+       let bairro = prompt(`Confirme seu bairro:`);
+       let referencia = prompt(`Tem algum ponto de referência para auxiliar o entregador?`);
+
+       alert(`O Valor da sua entrega para ${enderecoCompleto} ${bairro} ${complemento} ${referencia} é de R$5,00.<br> Tempo para entrega de 90 minutos`);    
+
+    } else{
+        let nomeRetirada = prompt(`Informe o nome para retirada do pedido:`);
+        let telefoneRetirada = prompt(`Informe um telefone com DDD para retirada do pedido`);
+
+        alert(`Prezado ${nomeRetirada}, para retirada do pedido no balcão, informar seu nome e número do pedido ao atendente!`);
+    
+    };
+    
 }
 
 function formaPagamento(formaPagamento) {
