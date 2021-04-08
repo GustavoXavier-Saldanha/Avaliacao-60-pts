@@ -74,16 +74,6 @@ let formaPagamento = parseInt(prompt(`1: Cartão\n
 4: Dinheiro`));
 
 
-//1 calabresa  -
-//2 4 queijos
-//3 frango
-//4 portuguesa
-//5 camarao
-//6 carne seca
-//7 lombo canadense
-//8 x-fritas
-
-
 function pizzaSaborUnico(saborPizza) {
     let sabor;
     switch (saborPizza) {
@@ -171,5 +161,20 @@ function pizzaSaborDuplo(saborPizza, saborPizza2) {
 return sabor1 + sabor2
 }
 
+
+switch (numeroSaborPizza) {
+
+    case numeroSaborPizza == 2:
+        alert(`O seu pedido foi:\nTamanho: ${tamanhoPizza}.\nO tipo de borda é: ${bordaPizza}\nUma metade será de: ${nomeSabor}\nA outra metade será de: ${nomeSabor2}.\nSua bebida é: ${bebida}.\nO tipo de entrega é:${tipoEntrega}.\nO valor total é: ${somaTotal}.\nAforma de pagamento será: ${formaPagamento}.`);
+        break;
+
+    case numeroSaborPizza == 1: 
+        alert(`O seu pedido foi:\nTamanho: ${tamanhoPizza}.\nO tipo de borda é: ${bordaPizza}\nUma metade será de: ${nomeSabor}\nA outra metade será de: ${nomeSabor2}.\nSua bebida é: ${bebida}.\nO tipo de entrega é:${tipoEntrega}.\nO valor total é: ${somaTotal}.\nAforma de pagamento será: ${formaPagamento}.`);
+        break;
+
+    default: alert('Você digitou a quantidade de sabores da pizza errado')
+
+        break;
+}
 
 
