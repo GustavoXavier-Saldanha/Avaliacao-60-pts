@@ -75,29 +75,29 @@ if(confirmacao != "sim"){
     alert("Pedido cancelado!!\nNão desista de nós!!\nReinicie a página, por favor!");
 }
 
-document.write(`<h3>O número do seu pedido é: ${numeroDoPedido()}.</h3>`);
-document.write(`Tamanho: ${tamanho}.<br>`);
-document.write(`O tipo de borda escolhido é: ${borda}.<br>`);
-document.write(`Uma metade será de: ${sabor}.<br>`);
-document.write(`Sua bebida é: ${acompanhamento}.<br>`);
-document.write(`O tipo de entrega é:${informacoesDelivery}.<br>`);
-document.write(`O valor total é: <strong>R$${somaTotal},00.</strong><br>`);
-document.write(`A forma de pagamento será: ${pagamento}.<br>`);
+document.write(`<h3>O número do seu pedido é: ${numeroDoPedido()}</h3>`);
+document.write(`<p>Tamanho: ${tamanho}.</p><br>`);
+document.write(`<p>O tipo de borda escolhido é: ${borda}.</p><br>`);
+document.write(`<p>Uma metade será de: ${sabor}.</p><br>`);
+document.write(`<p>Sua bebida é: ${acompanhamento}.</p><br>`);
+document.write(`<p>O tipo de entrega é: ${informacoesDelivery}.</p><br>`);
+document.write(`<p>O valor total é: <strong>R$${somaTotal},00.</strong></p><br>`);
+document.write(`<p>A forma de pagamento será: ${pagamento}.</p><br>`);
 if (troco == "sim"){
-    document.write(`Enviaremos o troco de: R$${valorTroco - somaTotal},00.<br>`);
+    document.write(`<p>Enviaremos o troco de: R$${valorTroco - somaTotal},00.</p><br>`);
 }
 
-document.write(`<h3>Informações do pedido.</h3><br>`);
+document.write(`<h3>Informações do pedido:</h3><br>`);
 
 if(tipoEntrega == 2){
-    document.write(`O telefone para contato é: ${telefone}.<br>`);
-    document.write(`O endereço é: ${enderecoCompleto}.<br>`);
-    document.write(`O complemento é: ${complemento}.<br>`);
-    document.write(`O bairro é: ${bairro}.<br>`);
-    document.write(`A forma de pagamento será: ${pagamento}.<br>`);
-    document.write(`A referência informada é: ${referencia}.<br>`);
+    document.write(`<p>O telefone para contato é: ${telefone}.</p><br>`);
+    document.write(`<p>O endereço é: ${enderecoCompleto}.</p><br>`);
+    document.write(`<p>O complemento é: ${complemento}.</p><br>`);
+    document.write(`<p>O bairro é: ${bairro}.</p><br>`);
+    document.write(`<p>A forma de pagamento será: ${pagamento}.</p><br>`);
+    document.write(`<p>A referência informada é: ${referencia}.</p><br>`);
 }
 else{
-    document.write(`O nome de quem vai realizar a retirada é: ${nomeRetirada}.<br>`);
-    document.write(`O telefone de quem vai fazer a retirada é: ${telefoneRetirada}.<br>`); 
+    document.write(`<p>O nome de quem vai realizar a retirada é: ${nomeRetirada}.</p><br>`);
+    document.write(`<p>O telefone de quem vai fazer a retirada é: ${telefoneRetirada}.</p><br>`); 
 }

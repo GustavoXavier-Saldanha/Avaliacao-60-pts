@@ -1,10 +1,31 @@
-body{
-    margin:0
-
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+* {
+    margin: 0%;
+    padding: 0%;
 }
 
-#conteinaer {
-    width: 1000vw;
-    height: 1000vh;
-    background-color: url('')
+body {
+    background-image: url(../img/pizzafundo3.jpeg);
+    background-size: cover;
+    font-family: 'Roboto', sans-serif;
 }
+
+h1 {
+    font-family: 'Press Start 2P', cursive;
+    margin: 30px 30px;
+    font-size: 3rem;
+    color: rgb(230, 230, 93);
+}
+h3{   
+    margin-left: 45px;
+    color: rgb(221, 221, 114);
+    font-size: 2rem;
+}
+
+p{
+    margin-left: 50px;
+    color: rgb(233, 233, 167);
+    font-size: 1.5rem;
+}
+
