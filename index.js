@@ -66,6 +66,8 @@ let valorBebida = [ 12, 10, 10, 8, 7 ];
 let tipoEntrega = parseInt(prompt(`Retirada no Balcão - R$0,00\n
 Delivery  - R$5,00
 `));
+let valorEntrega = [ 0, 5];
+
 let dadosEntrega = {
     celular: prompt(`Digite o seu número de celular`),
     bairro: prompt(`Digite o nome do seu bairro`),
@@ -75,9 +77,10 @@ let dadosEntrega = {
     pontoDeReferencia: prompt(`Digite um ponto de referencia`)
 };
 
-let somaTotal
+let somaTotal = valorBebida[bebida -1] + valorBordaPizza[bordaPizza -1] + valorTamanhoPizza[tamanhoPizza -1] + valorEntrega[tipoEntrega -1];
 
-let confirmacao 
+let confirmacao = parseInt(prompt(`Deseja confirmar seu pedido?`));
+let certeza = parseInt(prompt(`Tem certeza?`));
 
 let formaPagamento = parseInt(prompt(`1: Cartão\n
 2: Pix\n
