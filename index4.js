@@ -31,7 +31,6 @@ let tamanhoPizza = parseInt(prompt(`${nome} 1: Pequena 20cm  - R$25,00\n2: Media
 
 
 let bordaPizza = parseInt(prompt(`Tipo de borda:\n1: Gorgonzola  - R$10,00\n2: Provolone  - R$8,00\n3:Catupiry  - R$5,00\n4: Cheddar - R$5,00\n5:Sem borda`));
-let valorBordaPizza = [ 0,1]
 
 let numeroSaborPizza = parseInt(prompt(`${nome} você deseja uma pizza com 1 ou 2 sabores?`));
 
@@ -43,25 +42,43 @@ let saborPizza2 = parseInt(prompt(`1: Calabresa - Mussarela, Calabresa e cebola 
 
 
 let bebida = parseInt(prompt(`1: Coca Cola  - R$12,00\n2: Fanta - R$10,00\n3: Guaraná Antarctica  - R$10,00\n4: H2O  - R$8,00\n5: Del Valle  - R$7,00`));
-let valorBebida = [12, 10, 10, 8, 7];
-
 
 let tipoEntrega = parseInt(prompt(`1: Retirada no Balcão - R$0,00\n
 2: Delivery  - R$5,00
 `));
 
+switch (numeroSaborPizza){
 
-let valorEntrega = [0, 5];
+    case numeroSaborPizza == 2:
+        alert(`O seu pedido foi:\nTamanho: ${tamanho}.\nO tipo de borda é: ${borda}\nUma metade será de: ${sabor}\nA outra metade será de: ${meia2}.\nSua bebida é: ${acompanhamento}.\nO tipo de entrega é:${correio(tipoEntrega)}.\nO valor total é: ${somaTotal}.\nAforma de pagamento será: ${pagamento}.`);
+        break;
+
+    case numeroSaborPizza == 1: 
+        alert(`O seu pedido foi:\nTamanho: ${tamanho}.\nO tipo de borda é: ${borda}\nUma metade será de: ${sabor}\nA outra metade será de: ${meia2}.\nSua bebida é: ${acompanhamento}.\nO tipo de entrega é:${correio(tipoEntrega)}.\nO valor total é: ${somaTotal}.\nAforma de pagamento será: ${pagamento}.`);
+        break;
+
+    default: alert('Você digitou a quantidade de sabores da pizza errado');
+
+        break;
+}
 
 
-let dadosEntrega = {
-    celular: prompt(`Digite o seu número de celular`),
-    bairro: prompt(`Digite o nome do seu bairro`),
-    rua: prompt(`Digite o nome da sua rua`),
-    complemento: prompt(`Digite um complemento`),
-    numeroCasa: prompt(`Digite o numero da sua casa`),
-    pontoDeReferencia: prompt(`Digite um ponto de referencia`)
-};
+// let dadosEntrega = {
+    // celular: prompt(`Digite o seu número de celular`),
+    // bairro: prompt(`Digite o nome do seu bairro`),
+    // rua: prompt(`Digite o nome da sua rua`),
+    // complemento: prompt(`Digite um complemento`),
+    // numeroCasa: prompt(`Digite o numero da sua casa`),
+    // pontoDeReferencia: prompt(`Digite um ponto de referencia`)
+// };
+
+
+let tamanho = tamanhoDaPizza(tamanhoPizza);
+let borda = bordasSabor(bordaPizza)
+let sabor = pizzaSaborUnico(saborPizza)
+let meia2 = pizzaSaborDuplo(saborPizza, saborPizza2)
+let acompanhamento = nomeBebida(bebida)
+let pagamento = formaPagamento(formaPagamento)
 
 let somaTotal;
 
@@ -213,24 +230,30 @@ function nomeBebida(bebida){
             return nomeDaBebida
 }
 
-function correio(valorEntrega) {
-    if (valorEntrega == 5){
-       let telefone = prompt(`Informe o telefone com DDD:`);
-       let enderecoCompleto = prompt(`Confirme seu endereço com número:`);
-       let complemento = prompt(`Tem algum complemento?`);
-       let bairro = prompt(`Confirme seu bairro:`);
-       let referencia = prompt(`Tem algum ponto de referência para auxiliar o entregador?`);
+let telefone;
+let enderecoCompleto;
+let complemento;
+let bairro;
+let referencia;
+let nomeRetirada;
+let telefoneRetirada;
 
-       alert(`O Valor da sua entrega para ${enderecoCompleto} ${bairro} ${complemento} ${referencia} é de R$5,00.<br> Tempo para entrega de 90 minutos`);    
+function correio(tipoEntrega) {
+    if (tipoEntrega == 2){
+       telefone = prompt(`Informe o telefone com DDD:`);
+       enderecoCompleto = prompt(`Confirme seu endereço com número:`);
+       complemento = prompt(`Tem algum complemento?`);
+       bairro = prompt(`Confirme seu bairro:`);
+       referencia = prompt(`Tem algum ponto de referência para auxiliar o entregador?`);
+
+       return `Delivery`;   
 
     } else{
-        let nomeRetirada = prompt(`Informe o nome para retirada do pedido:`);
-        let telefoneRetirada = prompt(`Informe um telefone com DDD para retirada do pedido`);
+        nomeRetirada = prompt(`Informe o nome para retirada do pedido:`);
+        telefoneRetirada = prompt(`Informe um telefone com DDD para retirada do pedido`);
 
-        alert(`Prezado ${nomeRetirada}, para retirada do pedido no balcão, informar seu nome e número do pedido ao atendente!`);
-    
-    };
-    
+        return `Retirada no balcão`;  
+    }; 
 }
 
 function formaPagamento(formaPagamento) {
@@ -251,19 +274,5 @@ function formaPagamento(formaPagamento) {
         }return pagamento
 }
 
-switch (numeroSaborPizza){
-
-    case numeroSaborPizza == 2:
-        alert(`O seu pedido foi:\nTamanho: ${tamanhoPizza}.\nO tipo de borda é: ${bordaPizza}\nUma metade será de: ${nomeSabor}\nA outra metade será de: ${nomeSabor2}.\nSua bebida é: ${bebida}.\nO tipo de entrega é:${tipoEntrega}.\nO valor total é: ${somaTotal}.\nAforma de pagamento será: ${formaPagamento}.`);
-        break;
-
-    case numeroSaborPizza == 1: 
-        alert(`O seu pedido foi:\nTamanho: ${tamanhoPizza}.\nO tipo de borda é: ${bordaPizza}\nUma metade será de: ${nomeSabor}\nA outra metade será de: ${nomeSabor2}.\nSua bebida é: ${bebida}.\nO tipo de entrega é:${tipoEntrega}.\nO valor total é: ${somaTotal}.\nAforma de pagamento será: ${formaPagamento}.`);
-        break;
-
-    default: alert('Você digitou a quantidade de sabores da pizza errado')
-
-        break;
-}
 
 
