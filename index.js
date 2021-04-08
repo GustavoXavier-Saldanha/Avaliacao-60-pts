@@ -73,7 +73,7 @@ let somaTotal = valorBebida[bebida - 1] + valorBordaPizza[bordaPizza - 1] + valo
 switch (numeroSaborPizza, tipoEntrega) {
 
     case numeroSaborPizza == 2 && tipoEntrega == 2: 
-        alert(`O seu pedido foi:\nTamanho: ${tamanhoPizza}.\nO tipo de borda é: ${saborPizza2}\n${}`)
+        alert(`O seu pedido foi:\nTamanho: ${tamanhoPizza}.\nO tipo de borda é: ${saborPizza2}`)
         break;
 
 
@@ -86,4 +86,4 @@ let formaPagamento = parseInt(prompt(`1: Cartão\n
 4: Dinheiro`));
 
 
-
+}

@@ -72,14 +72,17 @@ function tamanhoDaPizza(tamanhoPizza){
     let tamanho;
     switch (tamanhoPizza) {
         case 1:
-            tamanho = "Pequena 20cm"
+            tamanho = "Pequena 20cm";
             break;
         case 2:
-            tamanho = "Media 25cm"
+            tamanho = "Media 25cm";
             break;
         case 3:
-            tamanho = "Gigante 35cm"
+            tamanho = "Gigante 35cm";
             break;
+        case 4:
+            tamanho = "Gigante 45cm";
+             break;
     }
 }
 
