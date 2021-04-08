@@ -27,46 +27,35 @@
 
 let nome = prompt("Bem vindo, por favor informe seu nome : )!");
 
-let tamanhoPizza = parseInt(prompt(`${nome} 1: Pequena 20cm  - R$25,00\n2: Media 25cm  - R$30,00\n3: Gigante 35cm  - R$40,00\n4: Familia 40cm  - R$45,00` ));
-let valorTamanhoPizza = [ 25,30,40, 45 ];
+let tamanhoPizza = parseInt(prompt(`${nome} 1: Pequena 20cm  - R$25,00\n2: Media 25cm  - R$30,00\n3: Gigante 35cm  - R$40,00\n4: Familia 40cm  - R$45,00`));
+let valorTamanhoPizza = [25, 30, 40, 45];
 
 let bordaPizza = parseInt(prompt(`Tipo de borda:\n1: Gorgonzola  - R$10,00\n2: Provolone  - R$8,00\n3:Catupiry  - R$5,00\n4: Cheddar - R$5,00\n5:Sem borda`));
-let valorBordaPizza = [ 10, 8, 5, 5, 0 ];
+let valorBordaPizza = [10, 8, 5, 5, 0];
 
 let numeroSaborPizza = parseInt(prompt(`${nome} você deseja uma pizza com 1 ou 2 sabores?`));
 
-let saborPizza = parseInt(prompt(`Calabresa - Mussarela, Calabresa e cebola \n
-4 Queijos - Mussarela, Cheddar, Parmesão e Prato\n
-Frango com Catupiry- Mussarela, Frango e Catupiry\n
-Portuguesa - Mussarela, Pimentão, Cebola, Presunto, Ovo, Cebola\n
-Camarão - Mussarela, Camarão, Salsinha e Cebolinha\n
-Carne seca - Mussarela, Carne seca e cream cheese\n
-Lombo Canadense - Mussarela, Lombo Canadense, Tomate, Orégano, Cebola\n
-X-Fritas - Mussarela, Contra-filé, Presunto, Bacon, Ovo, Tomate, Cebola, Batata Frita
+let saborPizza = parseInt(prompt(`1: Calabresa - Mussarela, Calabresa e cebola \n2: 4 Queijos - Mussarela, Cheddar, Parmesão e Prato\n3: Frango com Catupiry- Mussarela, Frango e Catupiry\n4: Portuguesa - Mussarela, Pimentão, Cebola, Presunto, Ovo, Cebola\n5: Camarão - Mussarela, Camarão, Salsinha e Cebolinha\n6: Carne seca - Mussarela, Carne seca e cream cheese\n7: Lombo Canadense - Mussarela, Lombo Canadense, Tomate, Orégano, Cebola\n8: X-Fritas - Mussarela, Contra-filé, Presunto, Bacon, Ovo, Tomate, Cebola, Batata Frita
 `));
+let nomeSabor = ["Calabresa", "4 Queijos", "Frango com Catupiry", "Portuguesa", "Camarão", "Carne seca", "Lombo Canadense", "X-Fritas"
+];
 
 
-let saborPizza2 = parseInt(prompt(`Calabresa - Mussarela, Calabresa e cebola \n
-4 Queijos - Mussarela, Cheddar, Parmesão e Prato\n
-Frango com Catupiry- Mussarela, Frango e Catupiry\n
-Portuguesa - Mussarela, Pimentão, Cebola, Presunto, Ovo, Cebola\n
-Camarão - Mussarela, Camarão, Salsinha e Cebolinha\n
-Carne seca - Mussarela, Carne seca e cream cheese\n
-Lombo Canadense - Mussarela, Lombo Canadense, Tomate, Orégano, Cebola\n
-X-Fritas - Mussarela, Contra-filé, Presunto, Bacon, Ovo, Tomate, Cebola, Batata Frita
+if (numeroSaborPizza == 2) {
+
+    let saborPizza2 = parseInt(prompt(`Agora o segundo sabor:\n1: Calabresa - Mussarela, Calabresa e cebola \n2: 4 Queijos - Mussarela, Cheddar, Parmesão e Prato\n3: Frango com Catupiry- Mussarela, Frango e Catupiry\n4: Portuguesa - Mussarela, Pimentão, Cebola, Presunto, Ovo, Cebola\n5: Camarão - Mussarela, Camarão, Salsinha e Cebolinha\n6: Carne seca - Mussarela, Carne seca e cream cheese\n7: Lombo Canadense - Mussarela, Lombo Canadense, Tomate, Orégano, Cebola\n8: X-Fritas - Mussarela, Contra-filé, Presunto, Bacon, Ovo, Tomate, Cebola, Batata Frita
 `));
+    let nomeSabor2 = ["Calabresa", "4 Queijos", "Frango com Catupiry", "Portuguesa", "Camarão", "Carne seca", "Lombo Canadense", "X-Fritas"
+    ];
+}
 
-let bebida = parseInt(prompt(`Coca Cola  - R$12,00\n
-Fanta - R$10,00\n
-Guaraná Antarctica  - R$10,00\n
-H2O  - R$8,00\n
-Del Valle  - R$7,00`));
-let valorBebida = [ 12, 10, 10, 8, 7 ];
+let bebida = parseInt(prompt(`1: Coca Cola  - R$12,00\n2: Fanta - R$10,00\n3: Guaraná Antarctica  - R$10,00\n4: H2O  - R$8,00\n5: Del Valle  - R$7,00`));
+let valorBebida = [12, 10, 10, 8, 7];
 
-let tipoEntrega = parseInt(prompt(`Retirada no Balcão - R$0,00\n
-Delivery  - R$5,00
+let tipoEntrega = parseInt(prompt(`1: Retirada no Balcão - R$0,00\n
+2: Delivery  - R$5,00
 `));
-let valorEntrega = [ 0, 5];
+let valorEntrega = [0, 5];
 
 let dadosEntrega = {
     celular: prompt(`Digite o seu número de celular`),
@@ -77,7 +66,7 @@ let dadosEntrega = {
     pontoDeReferencia: prompt(`Digite um ponto de referencia`)
 };
 
-let somaTotal = valorBebida[bebida -1] + valorBordaPizza[bordaPizza -1] + valorTamanhoPizza[tamanhoPizza -1] + valorEntrega[tipoEntrega -1];
+let somaTotal = valorBebida[bebida - 1] + valorBordaPizza[bordaPizza - 1] + valorTamanhoPizza[tamanhoPizza - 1] + valorEntrega[tipoEntrega - 1];
 
 let confirmacao = parseInt(prompt(`Deseja confirmar seu pedido?`));
 let certeza = parseInt(prompt(`Tem certeza?`));
@@ -85,7 +74,7 @@ let certeza = parseInt(prompt(`Tem certeza?`));
 let formaPagamento = parseInt(prompt(`1: Cartão\n
 2: Pix\n
 3: PicPay\n
-4: Dinheiro`)); 
+4: Dinheiro`));
 
 
 
