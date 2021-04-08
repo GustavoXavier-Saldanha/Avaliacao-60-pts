@@ -61,28 +61,17 @@ let nome = prompt("Bem vindo, por favor informe seu nome : )!");
 let tamanhoPizza = parseInt(prompt(`${nome}\n 1: Pequena 20cm  - R$25,00\n2: Media 25cm  - R$30,00\n3: Gigante 35cm  - R$40,00\n4: Familia 40cm  - R$45,00`));
 let valorTamanhoPizza = [25, 30, 40, 45];
 
-    switch (imc) {
+    switch (numeroSaborPizza) {
 
-        case numeroSaborPizza == 2 && tipoEntrega == 2 && bebida != 6:
-            alert(`O seu pedido foi:\nTamanho: ${tamanhoPizza}.\nO tipo de borda é: ${bordaPizza}\nO primeiro sabor é:${nomeSabor}\nO segundo sabor é:${nomeSabor2}.\nSua bebida é: ${bebida}.\nO tipo de entrega é:${}`)
+        case numeroSaborPizza == 2:
+            alert(`O seu pedido foi:\nTamanho: ${tamanhoPizza}.\nO tipo de borda é: ${bordaPizza}\nUma metade será de: ${nomeSabor}\nA outra metade será de: ${nomeSabor2}.\nSua bebida é: ${bebida}.\nO tipo de entrega é:${tipoEntrega}.\nO valor total é: ${somaTotal}.\nAforma de pagamento será: ${formaPagamento}.`);
             break;
 
-        case numeroSaborPizza == 2 && tipoEntrega == 2 && bebida = 6: alert(`O seu pedido foi:\nTamanho: ${tamanhoPizza}.\nO tipo de borda é: ${bordaPizza}\nO primeiro sabor é:${nomeSabor}\nO segundo sabor é:${nomeSabor2}`)
+        case numeroSaborPizza == 1: 
+            alert(`O seu pedido foi:\nTamanho: ${tamanhoPizza}.\nO tipo de borda é: ${bordaPizza}\nUma metade será de: ${nomeSabor}\nA outra metade será de: ${nomeSabor2}.\nSua bebida é: ${bebida}.\nO tipo de entrega é:${tipoEntrega}.\nO valor total é: ${somaTotal}.\nAforma de pagamento será: ${formaPagamento}.`);
             break;
 
-        case numeroSaborPizza == 2 && tipoEntrega == 1 && bebida : alert('continue assim, seu peso está ideal')
-            break;
-
-        case numeroSaborPizza == 1 && tipoEntrega == 2: alert('você está obeso, regule sua alimentação urgentemente')
-            break;
-
-            case numeroSaborPizza == 1 && tipoEntrega == 1: alert(' você está obeso, regule sua alimentação urgentemente')
-            break;
-
-            case imc > 35 && imc < 39.9: alert('você está obeso nível 2, procure um médico AGORA!')
-            break;
-
-        default: alert('você vai morrer daqui a dois dias, viva a vida intensamente')
+        default: alert('Você digitou a quantidade de sabores da pizza errado')
 
             break;
     }
