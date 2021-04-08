@@ -1,0 +1,27 @@
+1- Perguntar o nome da pessoa;
+
+2- Perguntar o tamanho da pizza;
+
+3- Perguntar quantos sabores serão a pizza;
+    3.1- perguntar o/os sabores das pizzas;
+
+4- perguntar se ele quer borda recheada;
+
+5- Perguntar a bebida ;
+
+6- tipo de entrega;
+    6.1- se for delivery pedir os dados de localização(Celular, Rua, Número, Complemento, Bairro, Ponto de referência);
+
+7- Fazer a soma de todos os valores;
+
+8- Confirmar o pedido;
+
+9- Forma de pagamento;
+    9.1- se for em dinheiro tem que ver se precisa de troco;
+
+10- nomear o número do pedido;
+
+11- mostrar valores na tela;
+
+12- Agradecemos sua preferência senhor(a) Fulano de tal.
+
