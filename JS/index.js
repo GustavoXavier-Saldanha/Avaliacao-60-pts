@@ -1,6 +1,4 @@
-function ativarPrograma(){
-    let nome = prompt("Bem vindo a Tec Pizzaria!!!\nNos informe seu nome, por favor :)!");
-
+    let nome;    
     let telefone;
     let enderecoCompleto;
     let complemento;
@@ -10,7 +8,10 @@ function ativarPrograma(){
     let telefoneRetirada;
     let troco;
     let valorTroco;
+
+function ativarPrograma(){
     
+    nome = prompt("Bem vindo a Tec Pizzaria!!!\nNos informe seu nome, por favor :D!");
     let tamanhoPizza = parseInt(prompt(`Beleza,${nome}!!\nAgora escolha o tamanho da sua pizza:\n1: Pequena 20cm  - R$25,00\n2: Media 25cm  - R$30,00\n3: Gigante 35cm  - R$40,00\n4: Familia 40cm  - R$45,00`));
     let valorTamanhoPizza = [25, 30, 40, 45];
     
@@ -72,7 +73,7 @@ function ativarPrograma(){
     
     let confirmacao = prompt(`Você deseja confirmar o pedido e os dados mostrados?\nDigite: sim ou não`).toLowerCase();
 
-    var mensagens;
+    var mensagens = "";
 
     if(confirmacao != "sim"){
         mensagens = `<h3>Pedido cancelado!!<br>Não desista de nós, foi só um erro de digitação!!<br>Reinicie a página e tente novamente, por favor!</h3>`;

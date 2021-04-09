@@ -121,6 +121,7 @@ function nomeBebida(bebida) {
 
 
 function correio(tipoEntrega) {
+   
     if (tipoEntrega == 2) {
         telefone = prompt(`Informe o telefone com DDD:\nExemplo: (22) 999999999`);
         enderecoCompleto = prompt(`Informe o seu endereço com número:\nExemplo: Avenida Alberto Braune, 870`);
@@ -145,7 +146,7 @@ function formaDePagamento(formaPagamento) {
             pagamento = "Cartão (débito/crédito)"
             break;
         case 2:
-            pagamento = "pix"
+            pagamento = "PIX (+5522999999999):D"
             break;
         case 3:
             pagamento = "PicPay"
