@@ -88,7 +88,7 @@ function ativarPrograma(){
     mensagens = mensagens + `<p>O tipo de entrega é: ${informacoesDelivery}.</p><br>`;
     mensagens = mensagens + `<p>O valor total é: <strong>R$${somaTotal},00.</strong></p><br>`;
     mensagens = mensagens + `<p>A forma de pagamento será: ${pagamento}.</p><br>`;
-    mensagens = mensagens + `<p>O pedido leva, em média, 90 min para chegar até você\nVale a pena esperar, está uma delícia ;) !!!</p><br>`;
+    mensagens = mensagens + `<p>O pedido leva, em média, 90 min para chegar até você.<br>Vale a pena esperar, está uma delícia ;) !!!</p><br>`;
     if (troco == "sim"){
         mensagens = mensagens + `<p>Enviaremos o troco de: R$${valorTroco - somaTotal},00.</p><br>`;
     }
