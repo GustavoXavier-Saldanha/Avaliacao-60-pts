@@ -1,4 +1,4 @@
-let nome = prompt("Bem vindo, por favor informe seu nome : )!");
+let nome = prompt("Bem vindo a Tec Pizzaria!!!\nNos informe seu nome, por favor :)!");
 
 let telefone;
 let enderecoCompleto;
@@ -19,7 +19,7 @@ let valorBordaPizza = [10, 8, 5, 5, 0];
 let numeroSaborPizza = parseInt(prompt(`${nome} você deseja uma pizza com 1 ou 2 sabores?`));
 
 
-let saborPizza = parseInt(prompt(`Perfeito, nós temos os seguintes sabores:\n1: Calabresa - Mussarela, Calabresa e cebola \n2: 4 Queijos - Mussarela, Cheddar, Parmesão e Prato\n3: Frango com Catupiry- Mussarela, Frango e Catupiry\n4: Portuguesa - Mussarela, Pimentão, Cebola, Presunto, Ovo, Cebola\n5: Camarão - Mussarela, Camarão, Salsinha e Cebolinha\n6: Carne seca - Mussarela, Carne seca e cream cheese\n7: Lombo Canadense - Mussarela, Lombo Canadense, Tomate, Orégano, Cebola\n8: X-Fritas - Mussarela, Contra-filé, Presunto, Bacon, Ovo, Tomate, Cebola, Batata Frita`));
+let saborPizza = parseInt(prompt(`Perfeito, nós temos os seguintes sabores :\n1: Calabresa - Mussarela, Calabresa e cebola \n2: 4 Queijos - Mussarela, Cheddar, Parmesão e Prato\n3: Frango com Catupiry- Mussarela, Frango e Catupiry\n4: Portuguesa - Mussarela, Pimentão, Cebola, Presunto, Ovo, Cebola\n5: Camarão - Mussarela, Camarão, Salsinha e Cebolinha\n6: Carne seca - Mussarela, Carne seca e cream cheese\n7: Lombo Canadense - Mussarela, Lombo Canadense, Tomate, Orégano, Cebola\n8: X-Fritas - Mussarela, Contra-filé, Presunto, Bacon, Ovo, Tomate, Cebola, Batata Frita`));
 
 let saborPizza2;
 
@@ -62,7 +62,7 @@ if (numeroSaborPizza == 2) {
     alert(`O número do seu pedido é: ${numeroDoPedido()}\nPedido:\nTamanho: ${tamanho}.\nO tipo de borda escolhido é: ${borda}\nUma metade será de: ${sabor}\nA outra metade será de: ${meia2}.\nSua bebida é: ${acompanhamento}.\nO tipo de entrega é: ${informacoesDelivery}.\nO valor total é: R$${somaTotal},00.\nA forma de pagamento será: ${pagamento}.`);
 }
 else if (numeroSaborPizza == 1) {
-    alert(`O número do seu pedido é: ${numeroDoPedido()}\nPedido:\nTamanho: ${tamanho}.\nO tipo de borda escolhido é: ${borda}\nUma metade será de: ${sabor}\nSua bebida é: ${acompanhamento}.\nO tipo de entrega é: ${informacoesDelivery}.\nO valor total é: R$${somaTotal},00.\nA forma de pagamento será: ${pagamento}.`);
+    alert(`O número do seu pedido é: ${numeroDoPedido()}\nPedido:\nTamanho: ${tamanho}.\nO tipo de borda escolhido é: ${borda}\nO sabor da pizza será de: ${sabor}\nSua bebida é: ${acompanhamento}.\nO tipo de entrega é: ${informacoesDelivery}.\nO valor total é: R$${somaTotal},00.\nA forma de pagamento será: ${pagamento}.`);
 }
 else {
     alert('Você digitou algum dado errado, refaça o pedido!!\nNão desista de nós <3!!');
@@ -83,6 +83,7 @@ document.write(`<p>Sua bebida é: ${acompanhamento}.</p><br>`);
 document.write(`<p>O tipo de entrega é: ${informacoesDelivery}.</p><br>`);
 document.write(`<p>O valor total é: <strong>R$${somaTotal},00.</strong></p><br>`);
 document.write(`<p>A forma de pagamento será: ${pagamento}.</p><br>`);
+document.write(`<p>O pedido leva, em média, 90 min para chegar até você\nVale a pena esperar, está uma delícia ;) !!!</p><br>`);
 if (troco == "sim"){
     document.write(`<p>Enviaremos o troco de: R$${valorTroco - somaTotal},00.</p><br>`);
 }
@@ -101,3 +102,4 @@ else{
     document.write(`<p>O nome de quem vai realizar a retirada é: ${nomeRetirada}.</p><br>`);
     document.write(`<p>O telefone de quem vai fazer a retirada é: ${telefoneRetirada}.</p><br>`); 
 }
+document.write(`<p>Muito obrigado pela preferencia, ${nome}.\nVolte sempre!!!</p><br>`); 
