@@ -75,7 +75,7 @@ function ativarPrograma(){
     var mensagens;
 
     if(confirmacao != "sim"){
-        mensagens = `<h3>Pedido cancelado!!\nNão desista de nós, foi só um erro de digitação!!\nReinicie a página, por favor!</h3>`;
+        mensagens = `<h3>Pedido cancelado!!<br>Não desista de nós, foi só um erro de digitação!!<br>Reinicie a página e tente novamente, por favor!</h3>`;
     }
     else{
     
